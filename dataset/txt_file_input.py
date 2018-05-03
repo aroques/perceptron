@@ -34,6 +34,11 @@ def parse_txt_file(file):
 
 
 def get_data_with_classification(line):
+    """Get a (numpy array, integer classification) tuple
+
+    :param line: A string of integers. Ex: '1 3 5\n'
+    :return: (numpy array, integer classification) tuple
+    """
     data = line_to_int_list(line)
     classification = data.pop()
     bias_weight = 1
