@@ -1,21 +1,17 @@
 from random import choice
-from numpy import array, dot, random
+from numpy import dot, random
+from dataset import get_training_data_from_txt_file
 
 
 def main():
-    training_data = [
-        (array([0, 0, 1]), -1),
-        (array([0, 1, 1]), 1),
-        (array([1, 0, 1]), 1),
-        (array([1, 1, 1]), 1),
-    ]
+    num_columns, num_rows, training_data = get_training_data_from_txt_file()
 
     w = random.rand(3)
     errors = []
     eta = 0.2
-    n = 100
+    iterations = 100
 
-    for i in range(n):
+    for i in range(iterations):
         x, expected = choice(training_data)
         result = dot(w, x)
         error = expected - sign(result)
@@ -24,7 +20,7 @@ def main():
 
     for x, _ in training_data:
         result = dot(x, w)
-        print("{}: {} -> {}".format(x[:2], result, sign(result)))
+        print("{}: {} -> {}".format(x[:num_columns], result, sign(result)))
 
 
 def sign(x):
