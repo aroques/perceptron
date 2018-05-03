@@ -12,15 +12,17 @@ The program will be expecting a text file that contains training data. Below is 
 1 1 1
 ```
 
-#### To run this program:
+## Usage
+
+**To run this program:**
 ```
 python3.6 main.py filename
 ```
 
-#### For help run:
+**For help run:**
 ```
 python3.6 main.py -h
 ```
 
-#### Credits
-The following [perceptron tutorial](https://blog.dbrgn.ch/2013/3/26/perceptrons-in-python/) was referenced when constructing this project. 
+## Credits
+The following [perceptron tutorial](https://blog.dbrgn.ch/2013/3/26/perceptrons-in-python/) was referenced when constructing this project.
