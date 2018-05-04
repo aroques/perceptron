@@ -4,7 +4,7 @@ A perceptron learning algorithm in python 3.
 
 ## Installation
 
-This program require a scientific computing package called NumPy. This is easily installed with PIP by running:
+This program requires a scientific computing package called NumPy, which can easily be installed by running:
 ```
 pip install numpy
 ```
